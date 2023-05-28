@@ -136,10 +136,10 @@
                 <div class="row-thumb">
                   <picture>
                     <source
-                      media="(min-width: 1258px)"
+                      media="(min-width: 1158px)"
                       srcset="
                         ./images/portfolio/row/banking.jpg   1x,
-                        ./images/portfolio/row/img396@2x.jpg 2x
+                        ./images/portfolio/row/img360@2x.jpg 2x
                       "
                       type="image/jpg"
                     />
@@ -153,19 +153,17 @@
                     />
                     <source
                       media="(max-width: 767px)"
-                      srcset="
-                        ./images/portfolio/row/img396@1x.jpg 1x,
-                        ./images/portfolio/row/img396@2x.jpg 2x
-                      "
+                      srcset="./images/portfolio/row/img396@1x.jpg 1x, . 2x"
                       type="image/jpg"
                     />
 
                     <img
                       class="row-img"
-                      src="./images/portfolio/row/banking.jpg"
+                      src="./images/portfolio/row/img396@1x.jpg"
                       alt="banking app interface concept"
                       width="396"
                       height="280"
+                      loading="lazy"
                     />
                   </picture>
                   <p class="text-overlay">
@@ -187,13 +185,33 @@
             <li class="row-item">
               <a class="row-link link" href="">
                 <div class="row-thumb">
-                  <img
-                    class="row-img"
-                    src="./images/portfolio/row/cash.jpg"
-                    alt="cashless payment"
-                    width="396"
-                    height="280"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1158px )"
+                      srcset="./images/portfolio/row/cash.jpg 1x, ./"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width:768px )"
+                      srcset=""
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width:767px )"
+                      srcset=""
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="row-img"
+                      src="./images/portfolio/row/cash.jpg"
+                      alt="cashless payment"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
 
                   <p class="text-overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
