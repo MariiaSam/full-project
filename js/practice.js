@@ -246,6 +246,104 @@ console.log(secondAbra);
 abra.innerHTML = `<span>!!!!${secondAbra}</span>`
 abra.style.color ="red";
 abra.textContent = "Whfkjdsxhfvkdjxfhgvc";
-const abraThird = String(abra.slice(4));
 
 //======================================== 
+const container = document.querySelector('.js-container');
+// // const box = document.querySelector('.js-box')
+// [...container.children].forEach((box) => {
+//     box.addEventListener('click', handlerClick)
+// })
+
+// function handlerClick(evt) {
+//     console.log(evt.currentTarget);
+// }
+
+container.addEventListener('click', handlerClick)
+
+function handlerClick(evt) {
+    // console.log('currentTarget', evt.currentTarget);
+    // if (evt.currentTarget === evt.target) {
+    //     return;
+    // }
+
+    if (!evt.target.classList.contains('js-box')) {
+        return;
+    }
+    console.log('target', evt.target);
+}
+
+// box.addEventListener('click', handlerClick);
+// box.addEventListener('click', handlerClick1);
+// box.addEventListener('click', handlerClick2);
+
+// function handlerClick(evt) {
+//     console.log(evt.target);
+//     evt.stopImmediatePropagation();
+//     evt.stopPropagation()
+//     console.log('fn1');
+// }
+
+// function handlerClick1(evt) {
+//     console.log(evt.target);
+
+//     console.log('fn2');
+// }
+// function handlerClick2(evt) {
+//     console.log(evt.target);
+//     console.log('fn3');
+// }
+
+
+// const box1 = document.querySelector('.js-box-1')
+// const box2 = document.querySelector('.js-box-2')
+// const box3 = document.querySelector('.js-box-3')
+
+
+// box1.addEventListener('click', handlerClick1)
+// box2.addEventListener('click', handlerClick2)
+// box3.addEventListener('click', handlerClick3)
+
+
+
+// function handlerClick1() {
+//     console.log("box - 1");
+// }
+// function handlerClick2(evt) {
+//     console.log("box - 2");
+//     // evt.stopPropagation();
+// }
+// function handlerClick3(evt) {
+//     console.log("box - 3");
+// }
+
+
+// const instance = basicLightbox.create(`
+// 	<h1>Dynamic Content</h1>
+// 	<p>You can set the content of the lightbox with JS.</p>
+// `)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
