@@ -435,25 +435,51 @@ img {
 .btn-hero {
   display: block;
   min-width: 169px;
+
+
   height: 56px;
   margin: 0 auto;
   padding: 16px 32px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.21;
   color: var(--white-text-color);
   background-color: var(--iris-bgc-btn);
   letter-spacing: 0.04em;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-hero:after {
+  content: '';
+  background: rgb(111, 232, 232);
+
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn-hero:hover:after,
+.btn-hero:focus:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .btn-hero:hover,
 .btn-hero:focus {
-  background-color: var(--ocean-bgc-btnfocus);
+  color: #fd9222;
 }
 
 /*SECTION _1*/
@@ -1144,7 +1170,38 @@ Customers*/
   background-color: var(--iris-bgc-btn);
   border-radius: 4px;
   border: none;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+
+.submit-btn:after {
+  content: '';
+  background: rgb(111, 232, 232);
+
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.submit-btn:hover:after,
+.submit-btn:focus:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  color: #fd9222;} 
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .submit-btn {
@@ -1467,6 +1524,8 @@ border-radius: 4px;*/
 /*MODAL WINDOW*/
 
 .backdrop {
+    overscroll-behavior: contain;
+z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -1475,6 +1534,7 @@ border-radius: 4px;*/
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
 }
 
 .backdrop.is-hidden {
