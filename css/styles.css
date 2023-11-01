@@ -740,7 +740,7 @@ img {
 .item-team .img-team{
   position: relative;
   perspective: 1000px;
-  transition: transform 0.5s;
+  transition: transform 1000ms;
 }
 
 
